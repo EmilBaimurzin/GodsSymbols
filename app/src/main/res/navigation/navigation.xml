@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentMain">
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.gods.game.ui.page1.FragmentPage1"
+        android:label="FragmentMain" >
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentChoose"
+            app:destination="@id/fragmentChoose" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentChoose"
+        android:name="com.gods.game.ui.choose.FragmentChoosing"
+        android:label="FragmentChoose" >
+        <action
+            android:id="@+id/action_fragmentChoose_to_fragmentGodsFall"
+            app:destination="@id/fragmentGodsFall" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentGodsFall"
+        android:name="com.gods.game.ui.gods_fall.FragmentGodsFall"
+        android:label="FragmentGodsFall" >
+        <argument
+            android:name="isZeus"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_fragmentGodsFall_to_dialogGameEnd"
+            app:destination="@id/dialogGameEnd" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogGameEnd"
+        android:name="com.gods.game.ui.dialogs.DialogGameEnd"
+        android:label="DialogGameEnd" >
+        <argument
+            android:name="scores"
+            app:argType="integer" />
+    </dialog>
+</navigation>

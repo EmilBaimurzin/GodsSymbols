@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background02"
+    android:layout_height="match_parent">
+
+    <com.gods.game.core.library.CustomImageButton
+        android:id="@+id/menu"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/choose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.gods.game.core.library.CustomImageButton
+        android:id="@+id/back"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.gods.game.core.library.CustomImageButton
+        android:id="@+id/zeus"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/choose_zeus"
+        app:layout_constraintBottom_toTopOf="@+id/back"
+        app:layout_constraintEnd_toStartOf="@+id/back"
+        />
+
+    <com.gods.game.core.library.CustomImageButton
+        android:id="@+id/cleopatra"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:src="@drawable/choose_cleopatra"
+        app:layout_constraintBottom_toTopOf="@+id/back"
+        app:layout_constraintStart_toEndOf="@+id/back" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="170dp"
+        android:layout_height="210dp"
+        android:src="@drawable/zeus"
+        app:layout_constraintBottom_toTopOf="@+id/zeus"
+        app:layout_constraintEnd_toEndOf="@+id/zeus" />
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_marginBottom="-10dp"
+        android:layout_height="200dp"
+        android:src="@drawable/cleopatra"
+        app:layout_constraintBottom_toTopOf="@+id/zeus"
+        app:layout_constraintEnd_toEndOf="@+id/cleopatra"
+        app:layout_constraintStart_toStartOf="@+id/cleopatra" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
